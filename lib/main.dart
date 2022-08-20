@@ -41,11 +41,11 @@ class _MyAppState extends State<MyApp> {
           title: Text(
             'Dice',
             style: TextStyle(
-              color: Colors.black,
+
               fontFamily: 'Revamped',
             ),
           ),
-          backgroundColor: Colors.cyanAccent,
+          backgroundColor: Colors.black,
         ),
         drawer: Theme(
           data: Theme.of(context).copyWith(
@@ -81,53 +81,53 @@ class _MyAppState extends State<MyApp> {
                 image: AssetImage('images/blue.jpg'),
                 fit: BoxFit.cover,
               ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                children: [
-                  Row(
-                    children: <Widget>[
-                      DiceWidget(
-                        dice: dice1,
-                      ),
-                      status2 == true
-                          ? DiceWidget(
-                        dice: dice2,
-                      )
-                          : Container(),
-                    ],
-                  ),
-                  Row(
-                    children: <Widget>[
-                      status3 == true
-                          ? DiceWidget(
-                        dice: dice3,
-                      )
-                          : Container(),
-                      status4 == true
-                          ? DiceWidget(
-                        dice: dice4,
-                      )
-                          : Container(),
-                    ],
-                  ),
-                  Row(
-                    children: <Widget>[
-                      status5 == true
-                          ? DiceWidget(
-                        dice: dice5,
-                      )
-                          : Container(),
-                      status6 == true
-                          ? DiceWidget(
-                        dice: dice6,
-                      )
-                          : Container(),
-                    ],
-                  ),
-                ],
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    Row(
+                      children: <Widget>[
+                        DiceWidget(
+                          dice: dice1,
+                        ),
+                        status2 == true
+                            ? DiceWidget(
+                          dice: dice2,
+                        )
+                            : Container(),
+                      ],
+                    ),
+                    Row(
+                      children: <Widget>[
+                        status3 == true
+                            ? DiceWidget(
+                          dice: dice3,
+                        )
+                            : Container(),
+                        status4 == true
+                            ? DiceWidget(
+                          dice: dice4,
+                        )
+                            : Container(),
+                      ],
+                    ),
+                    Row(
+                      children: <Widget>[
+                        status5 == true
+                            ? DiceWidget(
+                          dice: dice5,
+                        )
+                            : Container(),
+                        status6 == true
+                            ? DiceWidget(
+                          dice: dice6,
+                        )
+                            : Container(),
+                      ],
+                    ),
+                  ],
+                ),
               ),
-            ),
 
             ],
           ),
@@ -156,9 +156,9 @@ class DiceWidget extends StatelessWidget {
           change == true
               ? Image.asset('images/dice$dice.png')
               : SpinKitCubeGrid(
-                  color: Colors.cyanAccent,
-                  size: 100.0,
-                ),
+            color: Colors.cyanAccent,
+            size: 100.0,
+          ),
         ],
       ),
     );
@@ -193,7 +193,7 @@ class _MyDrawerState extends State<MyDrawer> {
                               color: Colors.white,
                             ),
                             borderRadius:
-                                BorderRadius.all(Radius.circular(40))),
+                            BorderRadius.all(Radius.circular(40))),
                         child: Padding(
                           padding: const EdgeInsets.fromLTRB(30, 15, 30, 15),
                           child: Text(
@@ -215,9 +215,9 @@ class _MyDrawerState extends State<MyDrawer> {
                           Expanded(
                               child: Center(
                                   child: Text(
-                            "dice 2",
-                            style: TextStyle(color: Colors.white, fontSize: 20     ,fontFamily: 'Revamped',),
-                          ))),
+                                    "dice 2",
+                                    style: TextStyle(color: Colors.white, fontSize: 20     ,fontFamily: 'Revamped',),
+                                  ))),
                           Expanded(
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
